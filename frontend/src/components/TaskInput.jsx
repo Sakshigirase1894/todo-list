@@ -12,10 +12,13 @@ function TaskInput({ fetchTasks }) {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/tasks", {
-        title: title,
-        note: note,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/tasks`,
+        {
+          title: title,
+          note: note,
+        }
+      );
 
       console.log(res.data);
 
@@ -31,7 +34,6 @@ function TaskInput({ fetchTasks }) {
 
   return (
     <div className="inputBox">
-
       <input
         type="text"
         placeholder="Enter task..."
@@ -54,7 +56,6 @@ function TaskInput({ fetchTasks }) {
       <button className="addBtn" onClick={addTask}>
         Add
       </button>
-
     </div>
   );
 }

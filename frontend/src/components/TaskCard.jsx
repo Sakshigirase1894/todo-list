@@ -8,8 +8,7 @@ function TaskCard({
   setEditText,
   setEditId,
 }) {
-  const API = "http://localhost:5000/api/tasks";
-
+const API = `${process.env.REACT_APP_API_URL}/api/tasks`;
   const toggleComplete = async () => {
     try {
       await axios.put(`${API}/${task._id}`, {

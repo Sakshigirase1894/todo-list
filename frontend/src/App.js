@@ -18,8 +18,7 @@ function App() {
 
   const [loading, setLoading] = useState(false);
 
-  const API = "http://localhost:5000/api/tasks";
-
+const API = `${process.env.REACT_APP_API_URL}/api/tasks`;
   // FETCH TASKS
   const fetchTasks = useCallback(async () => {
     try {
