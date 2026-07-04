@@ -1,0 +1,326 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+}
+
+/* ===== CONTAINER ===== */
+.container,
+.darkContainer {
+  width: 100%;
+  max-width: 900px;          /* fixed width for card layout */
+  min-height: 90vh;          /* almost full height */
+  padding: 32px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.darkContainer {
+  background: #1e293b;
+  color: #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.taskList {
+  max-height: 60vh;          /* scrollable area */
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 8px;
+}
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;        /* full height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ===== CONTAINER ===== */
+.container,
+.darkContainer {
+  width: 100%;              /* full width */
+  min-height: 100vh;        /* full height */
+  padding: 24px;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.darkContainer {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===== INPUT BOX ===== */
+.inputBox {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;              /* inputs take full width */
+}
+
+.input {
+  flex: 1;                  /* equal width */
+  min-width: 220px;         /* prevent too small */
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  font-size: 15px;          /* same font size */
+  height: 44px;             /* same height for all inputs */
+}
+
+.input::placeholder {
+  color: #999;
+  font-size: 15px;          /* same placeholder size */
+}
+
+/* ===== BUTTONS ===== */
+.addBtn {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 44px;             /* same height as inputs */
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(24, 90, 157, 0.3);
+}
+
+.toggle {
+  padding: 8px 14px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.toggle:hover {
+  background: #555;
+}
+
+/* ===== CARD ===== */
+.card,
+.darkCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card {
+  background: #fdfdfd;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.darkCard {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.darkCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== TEXT ===== */
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* ===== BUTTON GROUP ===== */
+.btnGroup {
+  display: flex;
+  gap: 16px;   /* distance वाढेल */
+}
+
+/* ===== ACTION BUTTONS ===== */
+.completeBtn,
+.editBtn,
+.deleteBtn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.completeBtn {
+  background: #00b4d8;
+}
+
+.editBtn {
+  background: #f59e0b;
+}
+
+.deleteBtn {
+  background: #dc2626;
+}
+
+.completeBtn:hover,
+.editBtn:hover,
+.deleteBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MODAL ===== */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.header, .inputBox {
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 10;
+}
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
+.darkContainer {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+}
+.completed .text {
+  text-decoration: line-through;
+  color: #888;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  text-decoration-color: #00b4d8;
+}
+.completeBtn:hover {
+  box-shadow: 0 0 10px rgba(0,180,216,0.6);
+}
+.editBtn:hover {
+  box-shadow: 0 0 10px rgba(245,158,11,0.6);
+}
+.deleteBtn:hover {
+  box-shadow: 0 0 10px rgba(220,38,38,0.6);
+}
+@media (max-width: 600px) {
+  .inputBox {
+    flex-direction: column;
+  }
+  .addBtn {
+    width: 100%;
+  }
+}
+/* ===== MODAL BUTTONS ===== */
+.modalButtons {
+  display: flex;
+  justify-content: space-between; /* buttons दूर जातील */
+  margin-top: 20px;
+  width: 100%;
+}
+
+.modalButtons button {
+  min-width: 110px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.cancelBtn {
+  background: #ef4444;
+}
+
+.saveBtn:hover,
+.cancelBtn:hover {
+  transform: translateY(-2px);
+}
