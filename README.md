@@ -1,70 +1,175 @@
-# To Do List Application
+# 📝 Todo List App
 
-## 📌 Project Overview
-The To Do List Application is a simple task management web application that helps users organize their daily tasks. Users can add, update, delete, and mark tasks as completed.
+A simple and responsive Full Stack Todo List application built using the MERN stack. Users can add, view, edit, and delete tasks with optional notes. The application uses MongoDB Atlas for data storage and is deployed on Render.
 
-## 🚀 Features
-- Add new tasks
-- Edit existing tasks
-- Delete tasks
-- Mark tasks as completed
-- Store tasks using MongoDB
-- Responsive user interface
+---
 
-## 🛠️ Technologies Used
+## 🚀 Live Demo
+
+**Frontend:**  
+https://todo-list-frontend-upq9.onrender.com
+
+**Backend API:**  
+https://todo-list-backend-llqd.onrender.com
+
+---
+
+## 📂 GitHub Repository
+
+https://github.com/Sakshigirase1894/todo-list
+
+---
+
+## ✨ Features
+
+- ➕ Add new tasks
+- 📝 Add optional notes
+- 📋 View all tasks
+- ✏️ Edit existing tasks
+- 🗑️ Delete tasks
+- 💾 MongoDB Atlas database integration
+- 🌐 Fully deployed on Render
+- 📱 Responsive user interface
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
 - React.js
+- Axios
+- CSS
+
+### Backend
 - Node.js
 - Express.js
-- MongoDB
-- CSS
-- JavaScript
 
-## 📂 Project Structure
+### Database
+- MongoDB Atlas
+- Mongoose
+
+### Deployment
+- Render (Frontend)
+- Render (Backend)
+
+---
+
+## 📁 Project Structure
+
 ```
-To Do List/
-├── frontend/
+todo-list/
+│
 ├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── .env
+│   └── package.json
+│
 ├── README.md
 └── .gitignore
 ```
 
+---
+
 ## ⚙️ Installation
 
-1. Clone the repository
+### Clone Repository
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/Sakshigirase1894/todo-list.git
 ```
 
-2. Install dependencies
+Move into the project:
 
-Backend:
+```bash
+cd todo-list
+```
+
+---
+
+## Backend Setup
+
 ```bash
 cd backend
 npm install
 ```
 
-Frontend:
+Create a `.env` file:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+Run backend:
+
+```bash
+npm start
+```
+
+---
+
+## Frontend Setup
+
 ```bash
 cd frontend
 npm install
 ```
 
-3. Start the application
+Create a `.env` file:
 
-Backend:
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
+
+Run frontend:
+
 ```bash
 npm start
 ```
 
-Frontend:
-```bash
-npm start
-```
+---
 
 ## 📸 Screenshots
 
-(Add project screenshots here)
+Add screenshots of your application here.
+
+Example:
+
+- Home Page
+- Add Task
+- Edit Task
+
+---
+
+## 📌 Future Improvements
+
+- User Authentication
+- Task Categories
+- Due Dates
+- Search Tasks
+- Filter Tasks
+- Dark Mode
+- Task Completion Status
+
+---
 
 ## 👩‍💻 Author
 
-Sakshi Girase
+**Sakshi Girase**
+
+GitHub:
+https://github.com/Sakshigirase1894
+
+---
+
+## 📄 License
+
+This project is created for learning and internship purposes.
